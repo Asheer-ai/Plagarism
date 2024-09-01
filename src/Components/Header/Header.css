@@ -1,0 +1,70 @@
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* New gradient background */
+    color: #ffffff; /* White text color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar a {
+    color: #ffffff; /* White text color for links */
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.navbar a:hover {
+    color: #ff7f50; /* Coral color on hover */
+    text-shadow: 0 0 5px rgba(255, 127, 80, 0.7); /* Glow effect on hover */
+}
+
+/* Buttons */
+.button-primary {
+    background: linear-gradient(90deg, #ff7f50, #ff6347); /* Gradient background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* More rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-primary:hover {
+    background: linear-gradient(90deg, #d3d3d3, #a9a9a9, #808080); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.button-secondary {
+    background: linear-gradient(90deg, #ff7f50, #ff6347); /* Gradient background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* More rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-secondary:hover {
+    background: linear-gradient(90deg, #d3d3d3, #a9a9a9, #808080);
+
+    /* Darker gradient on hover */
+    
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Logo */
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

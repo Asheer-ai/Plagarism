@@ -1,0 +1,87 @@
+/* HomePage.css */
+
+.home-page {
+    background-color: #f0f4f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #777;
+}
+.plagiarism-info {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plagiarism-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.plagiarism-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.plagiarism-info p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plagiarism-info ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.plagiarism-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
