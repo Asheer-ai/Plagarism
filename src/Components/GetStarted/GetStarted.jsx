@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-function GetStarted({ onCheckPlagiarism }) {
+function GetStarted() {
     const [text, setText] = useState('');
     const [file, setFile] = useState(null);
+    const [result, setResult] = useState('');
 
     const handleTextChange = (e) => {
         setText(e.target.value);
@@ -13,14 +14,36 @@ function GetStarted({ onCheckPlagiarism }) {
     };
 
     const handleSubmit = () => {
-        // If a file is uploaded, send the file to the backend
+        const url = 'http://localhost:5000/check-plagiarism';
+
         if (file) {
+            
             const formData = new FormData();
             formData.append('file', file);
-            onCheckPlagiarism(formData);
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                setResult(data.result); 
+            })
+            .catch(error => console.error('Error:', error));
         } else {
-            // If text is entered, send the text to the backend
-            onCheckPlagiarism({ text });
+            
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text }),
+            })
+            .then(response => response.json())
+            .then(data => {r
+                setResult(data.result); 
+            })
+            .catch(error => console.error('Error:', error));
         }
     };
 
@@ -48,6 +71,14 @@ function GetStarted({ onCheckPlagiarism }) {
             >
                 Check for Plagiarism
             </button>
+
+            
+            {result && (
+                <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#dfe6e9' }}>
+                    <h2>Plagiarism Check Result:</h2>
+                    <p>{result}</p>
+                </div>
+            )}
         </div>
     );
 }
